@@ -1,0 +1,23 @@
+.favories {
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.favories .favories_title {
+  margin-top: 0;
+}
+
+.favories .no_items_favorite {
+  max-width: 600px;
+  height: 400px;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.favories .favories_all_boxs {
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+}

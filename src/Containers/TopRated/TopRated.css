@@ -1,0 +1,8 @@
+.top_rated_movies {
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.top_rated_movies .title_top_rated {
+  text-decoration: capitalize;
+}

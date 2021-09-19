@@ -1,0 +1,327 @@
+.main_info {
+  color: #fff;
+}
+
+.movie_page .banner_movie {
+  color: #fff;
+  padding: 40px 20px;
+  background-size: cover;
+  position: relative;
+}
+
+.movie_page .banner_movie .overlay_banner_movie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0%, 0%, 0%, 1) 150px,
+    rgba(0%, 0%, 0%, 0.84) 100%
+  );
+}
+
+.movie_page .banner_movie .content_movie {
+  position: relative;
+  z-index: 2;
+  display: flex;
+}
+
+@media (max-width: 680px) {
+  .movie_page .banner_movie .content_movie {
+    flex-wrap: wrap;
+  }
+}
+
+.movie_page .banner_movie .content_movie .image_poster {
+  flex-basis: 40%;
+}
+
+@media (max-width: 680px) {
+  .movie_page .banner_movie .content_movie .image_poster {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .movie_page .banner_movie .content_movie .image_poster img {
+    width: 100%;
+  }
+}
+
+.movie_page .banner_movie .content_movie .image_poster image {
+  max-width: 100%;
+}
+
+.movie_page .banner_movie .content_movie .info_movie {
+  margin-left: 2%;
+}
+
+@media (max-width: 680px) {
+  .movie_page .banner_movie .content_movie .info_movie {
+    margin-left: 0%;
+    flex-basis: 100%;
+  }
+
+  .movie_page .banner_movie .content_movie .info_movie > * {
+    /* margin: auto; */
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .movie_page .banner_movie .content_movie .info_movie .movie_title {
+    font-size: 22px;
+  }
+}
+
+.movie_page .banner_movie .content_movie .info_movie .movie_details {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+}
+
+@media (max-width: 680px) {
+  .movie_page .banner_movie .content_movie .info_movie .movie_details {
+    justify-content: center;
+  }
+}
+
+.movie_page .content_movie .info_movie .movie_details .movie_genres a {
+  color: #01d272;
+}
+
+.movie_page .content_movie .info_movie .rating_btns {
+  margin-top: 20px;
+}
+
+@media (max-width: 680px) {
+  .movie_page .content_movie .info_movie .rating_btns {
+    justify-content: center;
+  }
+}
+
+.movie_page .content_movie .info_movie .rating_btns .rating_movie {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #081c22;
+  padding: 5px;
+  position: relative;
+}
+
+.movie_page .content_movie .info_movie .rating_btns .rating_movie .vote_people {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  color: #ddd;
+}
+
+.movie_page
+  .content_movie
+  .info_movie
+  .rating_btns
+  .rating_movie
+  .CircularProgressbar-text {
+  font-size: 35px;
+  fill: #21d07a;
+}
+
+.movie_page .content_movie .info_movie .rating_btns {
+  display: flex;
+  align-items: center;
+}
+
+.movie_page
+  .content_movie
+  .info_movie
+  .rating_btns
+  .rating_movie
+  .CircularProgressbar
+  .CircularProgressbar-path {
+  stroke: #21d07a;
+}
+
+.movie_page .content_movie .info_movie .rating_btns .btn_fav {
+  margin-left: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #032541;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.movie_page .content_movie .info_movie .rating_btns .btn_fav .MuiButton-label {
+  margin-right: 5px;
+}
+
+.movie_page .content_movie .info_movie .overview {
+  margin-top: 40px;
+}
+
+.movie_page .banner_movie .small_info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie_page .banner_movie .small_info > * {
+  margin: 0 15px 10px;
+}
+
+.movie_page .banner_movie .small_info h4 {
+  font-size: 20px;
+}
+
+.movie_page .banner_movie .small_info .production_countries span {
+  margin-right: 10px;
+}
+
+.movie_page .banner_movie .small_info .production_companies h4 {
+  margin-bottom: 0;
+}
+
+.movie_page .banner_movie .small_info .production_companies .all_companies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie_page
+  .banner_movie
+  .small_info
+  .production_companies
+  .all_companies
+  .companies {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.movie_page
+  .banner_movie
+  .small_info
+  .production_companies
+  .all_companies
+  .companies
+  img {
+  width: 60px;
+}
+
+.movie_page .banner_movie .keywords {
+  position: relative;
+  z-index: 2;
+}
+
+.movie_page .banner_movie .keywords h3 {
+  margin: 0;
+}
+
+.movie_page .banner_movie .keywords ul li {
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 15px;
+  background-color: #e5e5e5;
+  margin: 0 0px 7px 7px;
+  font-size: 14px;
+}
+
+.movie_page .banner_movie .keywords ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.movie_page .movie_video {
+  background-color: #aaa;
+  padding: 40px 20px;
+}
+
+.movie_page .movie_video .video_box {
+  width: 500px;
+  height: 280px;
+  margin: auto;
+  position: relative;
+}
+
+@media (max-width: 550px) {
+  .movie_page .movie_video .video_box {
+    width: 90%;
+    height: 200px;
+  }
+}
+
+.movie_page .movie_video .video_box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.movie_page .actors_boxs {
+  padding: 40px 20px;
+  display: grid;
+  grid-gap: 10px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.movie_page .actors_boxs > div {
+  width: 200px;
+  margin: auto;
+}
+
+.movie_page .actors_boxs > div a {
+  text-decoration: none;
+}
+
+.movie_page .actors_boxs .MuiCardMedia-img {
+  object-fit: contain;
+}
+
+.movie_page .actors_boxs h2 {
+  font-size: 20px;
+}
+
+.movie_page .recommendations_movies {
+  background-color: #aaa;
+  padding: 40px 20px;
+}
+
+.movie_page .recommendations_movies h2 {
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.movie_page .recommendations_movies .recommendations_all_movies {
+  width: 500px;
+  margin: auto;
+}
+
+@media (max-width: 550px) {
+  .movie_page .recommendations_movies .recommendations_all_movies {
+    width: auto;
+  }
+}
+
+.movie_page .recommendations_movies .recommendations_all_movies ul li div {
+  height: 450px;
+}
+
+.movie_page .recommendations_movies .recommendations_all_movies ul li div img {
+  max-width: 100%;
+}
+
+.movie_page .recommendations_movies .recommendations_all_movies .legend {
+  bottom: 75px;
+  cursor: pointer;
+}

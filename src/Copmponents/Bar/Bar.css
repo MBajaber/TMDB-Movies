@@ -1,0 +1,59 @@
+.bar {
+  flex-grow: 1;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.bar .MuiAppBar-colorPrimary {
+  background-color: #333;
+}
+
+.bar .MuiToolbar-root {
+  min-height: 109px;
+  align-items: flex-start;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.bar .MuiTypography-root {
+  flex-grow: 1;
+  align-self: flex-end;
+}
+
+.bar .logo {
+  width: 55px;
+}
+
+.bar .logo img {
+  max-width: 100%;
+}
+
+.bar input {
+  position: relative;
+  border: 0;
+  height: 1.1876em;
+  margin: 0;
+  width: 100%;
+  display: block;
+  padding: 8px 10px 8px 32px !important;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+  animation-name: mui-auto-fill-cancel;
+  letter-spacing: inherit;
+  animation-duration: 10ms;
+  -webkit-tap-highlight-color: transparent;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: currentColor;
+}
+
+.bar .search_icon {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  top: 0;
+  left: 5px;
+}

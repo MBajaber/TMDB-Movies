@@ -1,0 +1,12 @@
+.pagination .MuiPagination-ul {
+  justify-content: center;
+}
+
+.pagination .MuiPagination-ul li button,
+.pagination .MuiPagination-ul li div {
+  color: #fff;
+}
+
+.pagination .MuiPagination-ul li .MuiPaginationItem-textPrimary.Mui-selected {
+  background-color: #57bbfb;
+}

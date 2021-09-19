@@ -1,0 +1,8 @@
+.now_playing_movies {
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.now_playing_movies .title_now_playing {
+  text-decoration: capitalize;
+}

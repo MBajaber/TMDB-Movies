@@ -1,0 +1,19 @@
+.not_found {
+  height: calc(100vh - 109px);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.not_found .not_found_title {
+  margin: 0;
+  color: #fff;
+  font-size: 35px;
+}
+
+@media (max-width: 400px) {
+  .not_found .not_found_title {
+    font-size: 30px;
+  }
+}

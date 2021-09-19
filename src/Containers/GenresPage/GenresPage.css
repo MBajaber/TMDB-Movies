@@ -1,0 +1,8 @@
+.genres {
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.genres_title {
+  text-transform: capitalize;
+}

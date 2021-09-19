@@ -1,0 +1,8 @@
+.upcoming_movies {
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.upcoming_movies .title_upcoming {
+  text-decoration: capitalize;
+}
