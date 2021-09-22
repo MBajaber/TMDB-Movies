@@ -2,7 +2,7 @@ import React from 'react';
 import './GenresPage.css';
 import { useSelector } from 'react-redux';
 import Movies from '../../Copmponents/Movies/Movies';
-import { api_key, base } from '../../Copmponents/allRequests';
+import { api_key, base } from '../../staticInfo';
 
 function GenresPage() {
     const { genres } = useSelector(state => state.movies);

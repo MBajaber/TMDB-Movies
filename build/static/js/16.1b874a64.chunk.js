@@ -1,0 +1,2 @@
+(this.webpackJsonptmdb=this.webpackJsonptmdb||[]).push([[16],{420:function(a,e,t){},447:function(a,e,t){"use strict";t.r(e);t(1),t(420);var s=t(203),c=t(54),n=t(5);e.default=function(){return Object(n.jsxs)("div",{className:"popular_movies",children:[Object(n.jsx)("h2",{className:"title_popular",children:"Popular Movies"}),Object(n.jsx)(s.a,{startUrl:"".concat(c.b,"/movie/popular?api_key=").concat(c.a,"&language=en-US&page="),endUrl:""})]})}}}]);
+//# sourceMappingURL=16.1b874a64.chunk.js.map

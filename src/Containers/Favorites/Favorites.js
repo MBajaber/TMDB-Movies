@@ -3,7 +3,7 @@ import './Favorites.css';
 import Movie from '../../Copmponents/Movies/Movie/Movie';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMovieId } from '../../store/movieSlice';
-import { allRequest } from '../../Copmponents/allRequests';
+import { imageUrl } from '../../staticInfo';
 
 function Favories() {
     const { favoriteList } = useSelector(state => state.movies);
@@ -26,7 +26,7 @@ function Favories() {
                     </>
                 ) : (
                     <div className="favories_all_boxs">
-                        {favoriteList.map(el => <Movie key={el.movieData.id} imageUrl={`${allRequest.imageUrl}/w300/${el.movieData.backdrop_path}`} id={el.movieData.id} title={el.movieData.title} paragraph={el.movieData.overview} rating={el.movieData.vote_average} date={el.movieData.release_date} clickHandler={clickHandler} />)}
+                        {favoriteList.map(el => <Movie key={el.movieData.id} imageUrl={`${imageUrl}/w300/${el.movieData.backdrop_path}`} id={el.movieData.id} title={el.movieData.title} paragraph={el.movieData.overview} rating={el.movieData.vote_average} date={el.movieData.release_date} clickHandler={clickHandler} />)}
                     </div>
                 )
             }

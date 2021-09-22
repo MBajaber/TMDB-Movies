@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './MoviePage.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { api_key, base, allRequest } from '../../Copmponents/allRequests';
+import { api_key, base, imageUrl } from '../../staticInfo';
 import { CircularProgressbar} from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 import { makeStyles } from '@material-ui/core/styles';
@@ -37,7 +37,6 @@ function BootstrapTooltip(props) {
 function MoviePage() {
     const { movieId, favoriteList } = useSelector(state => state.movies);
     const { userInfo } = useSelector(state => state.user);
-    
     const [movieData, setMovieData] = useState({});
     const [moviekeywords, setMoviekeywords] = useState({});
     const [allActors, setAllActors] = useState({});
@@ -143,23 +142,16 @@ function MoviePage() {
             dispatch(removeFromFavoriteList(movieData.id));
         } else {
             dispatch(addToFavoriteList({movieData: movieData}));
-            // dispatch(addToFavoriteList({
-            //     movieData: movieData,
-            //     moviekeywords: moviekeywords,
-            //     allActors: allActors,
-            //     recommendations: recommendations,
-            //     trailerKey: trailerKey,
-            // }))
         }
     }
 
     return isLoading ? <Loader /> : Object.keys(movieData).length !== 0 ? (
         <div className='movie_page'>
-            <div className="banner_movie" style={{backgroundImage: `url(${allRequest.imageUrl}/original/${movieData.backdrop_path})`}}>
+            <div className="banner_movie" style={{backgroundImage: `url(${imageUrl}/original/${movieData.backdrop_path})`}}>
                 <div className="overlay_banner_movie" />
                 <div className="content_movie">
                     <div className="image_poster">
-                        <img src={`${allRequest.imageUrl}/w300/${movieData.poster_path}`} alt={movieData.title} />
+                        <img src={`${imageUrl}/w300/${movieData.poster_path}`} alt={movieData.title} />
                     </div>
                     <div className="info_movie">
                         <h1 className="movie_title">{movieData.title} ({movieData.release_date.slice(0, 4)})</h1>
@@ -243,7 +235,7 @@ function MoviePage() {
                                             <h5>{el.name}</h5>
                                             { 
                                                 el.logo_path && (
-                                                    <img src={`${allRequest.imageUrl}/w92/${el.logo_path}`} alt={el.name} title={el.name} loading='lazy' />
+                                                    <img src={`${imageUrl}/w92/${el.logo_path}`} alt={el.name} title={el.name} loading='lazy' />
                                                 )
                                             }
                                         </div>
@@ -284,7 +276,7 @@ function MoviePage() {
                                     component="img"
                                     alt={el.name}
                                     height="140"
-                                    image={`${allRequest.imageUrl}/w185/${el.profile_path}`}
+                                    image={`${imageUrl}/w185/${el.profile_path}`}
                                     title={el.name}
                                 />
                                 <CardContent>
@@ -306,7 +298,7 @@ function MoviePage() {
                                 {
                                     recommendations.map(el => (
                                         <div key={el.id}>
-                                            <img src={`${allRequest.imageUrl}/w500${el.poster_path}`} alt={el.title} />
+                                            <img src={`${imageUrl}/w500${el.poster_path}`} alt={el.title} />
                                             <Link to={`/movie/${encodeURI(el.title).toLocaleLowerCase()}`} onClick={() => clickHandler(el.id)} className="legend" title={el.title}>{el.title}</Link>
                                         </div>
                                     ))

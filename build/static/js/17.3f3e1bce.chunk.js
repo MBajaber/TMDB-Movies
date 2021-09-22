@@ -1,0 +1,2 @@
+(this.webpackJsonptmdb=this.webpackJsonptmdb||[]).push([[17],{421:function(t,e,a){},448:function(t,e,a){"use strict";a.r(e);a(1),a(421);var s=a(203),c=a(54),n=a(5);e.default=function(){return Object(n.jsxs)("div",{className:"top_rated_movies",children:[Object(n.jsx)("h2",{className:"title_top_rated",children:"Top Rated Movies"}),Object(n.jsx)(s.a,{startUrl:"".concat(c.b,"/movie/top_rated?api_key=").concat(c.a,"&language=en-US&page="),endUrl:""})]})}}}]);
+//# sourceMappingURL=17.3f3e1bce.chunk.js.map

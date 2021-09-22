@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Containers/GenresPage/GenresPage.css"],"names":[],"mappings":"AAAA,QACE,UAAW,CACX,iBACF,CAEA,cACE,yBACF","file":"10.b2d1af67.chunk.css","sourcesContent":[".genres {\r\n  color: #fff;\r\n  padding: 40px 20px;\r\n}\r\n\r\n.genres_title {\r\n  text-transform: capitalize;\r\n}\r\n"]}

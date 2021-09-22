@@ -1,0 +1,2 @@
+(this.webpackJsonptmdb=this.webpackJsonptmdb||[]).push([[14],{428:function(n,a,e){},453:function(n,a,e){"use strict";e.r(a);e(1),e(428);var t=e(203),i=e(54),s=e(5);a.default=function(){return Object(s.jsxs)("div",{className:"now_playing_movies",children:[Object(s.jsx)("h2",{className:"title_now_playing",children:"Now Playing Movies"}),Object(s.jsx)(t.a,{startUrl:"".concat(i.b,"/movie/now_playing?api_key=").concat(i.a,"&language=en-US&page="),endUrl:""})]})}}}]);
+//# sourceMappingURL=14.6c06b5e4.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Containers/NowPlaying/NowPlaying.css"],"names":[],"mappings":"AAAA,oBACE,UAAW,CACX,iBACF,CAEA,uCACE,kCAA2B,CAA3B,0BACF","file":"14.1d06ed0b.chunk.css","sourcesContent":[".now_playing_movies {\r\n  color: #fff;\r\n  padding: 40px 20px;\r\n}\r\n\r\n.now_playing_movies .title_now_playing {\r\n  text-decoration: capitalize;\r\n}\r\n"]}

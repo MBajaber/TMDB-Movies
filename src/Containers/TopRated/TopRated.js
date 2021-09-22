@@ -1,7 +1,7 @@
 import React from 'react';
 import './TopRated.css';
 import Movies from '../../Copmponents/Movies/Movies';
-import { api_key, base } from '../../Copmponents/allRequests';
+import { api_key, base } from '../../staticInfo';
 
 function TopRated() {
     return (

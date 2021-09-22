@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Containers/KeywordPage/Keyword.css"],"names":[],"mappings":"AAAA,SACE,UAAW,CACX,iBACF,CAEA,wBACE,yBACF","file":"11.be11abe5.chunk.css","sourcesContent":[".keyword {\r\n  color: #fff;\r\n  padding: 40px 20px;\r\n}\r\n\r\n.keyword .keyword_title {\r\n  text-transform: capitalize;\r\n}\r\n"]}

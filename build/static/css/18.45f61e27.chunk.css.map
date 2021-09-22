@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Containers/Upcoming/Upcoming.css"],"names":[],"mappings":"AAAA,iBACE,UAAW,CACX,iBACF,CAEA,iCACE,kCAA2B,CAA3B,0BACF","file":"18.45f61e27.chunk.css","sourcesContent":[".upcoming_movies {\r\n  color: #fff;\r\n  padding: 40px 20px;\r\n}\r\n\r\n.upcoming_movies .title_upcoming {\r\n  text-decoration: capitalize;\r\n}\r\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Containers/Popular/Popular.css"],"names":[],"mappings":"AAAA,gBACE,UAAW,CACX,iBACF,CAEA,+BACE,kCAA2B,CAA3B,0BACF","file":"16.5a0632c5.chunk.css","sourcesContent":[".popular_movies {\r\n  color: #fff;\r\n  padding: 40px 20px;\r\n}\r\n\r\n.popular_movies .title_popular {\r\n  text-decoration: capitalize;\r\n}\r\n"]}

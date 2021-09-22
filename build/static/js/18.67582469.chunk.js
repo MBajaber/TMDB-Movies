@@ -1,0 +1,2 @@
+(this.webpackJsonptmdb=this.webpackJsonptmdb||[]).push([[18],{422:function(c,e,n){},449:function(c,e,n){"use strict";n.r(e);n(1),n(422);var t=n(203),i=n(54),s=n(5);e.default=function(){return Object(s.jsxs)("div",{className:"upcoming_movies",children:[Object(s.jsx)("h2",{className:"title_upcoming",children:"Upcoming Movies"}),Object(s.jsx)(t.a,{startUrl:"".concat(i.b,"/movie/upcoming?api_key=").concat(i.a,"&language=en-US&page="),endUrl:""})]})}}}]);
+//# sourceMappingURL=18.67582469.chunk.js.map

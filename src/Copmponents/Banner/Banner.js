@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Banner.css';
-import { api_key, base } from '../../Copmponents/allRequests';
-import { allRequest } from '../allRequests';
+import { api_key, base, imageUrl } from '../../staticInfo';
 import { ColorExtractor } from 'react-color-extractor';
 
 function Banner() {
@@ -55,8 +54,8 @@ function Banner() {
     };
     
     return movieInfo && movieInfo.backdrop_path !== null ? (
-        <div className='banner' style={{ backgroundImage: `url(${allRequest.imageUrl + '/original' + movieInfo.backdrop_path})` }}>
-            {<ColorExtractor getColors={getColors} src={allRequest.imageUrl + '/original' + movieInfo.backdrop_path} />}
+        <div className='banner' style={{ backgroundImage: `url(${imageUrl + '/original' + movieInfo.backdrop_path})` }}>
+            {<ColorExtractor getColors={getColors} src={imageUrl + '/original' + movieInfo.backdrop_path} />}
             <div className="overlay" style={{ backgroundColor: `rgba(${mainColor}, .4)`, backgroundImage: `linear-gradient(to top, rgba(${mainColor}, 0.8) 0, rgba(${mainColor}, 0) 60%, rgba(${mainColor}, 0.8) 100%)` }} />
             <div className="content">
                 <h1>Unlimited movies, TV <br />shows, and more.</h1>

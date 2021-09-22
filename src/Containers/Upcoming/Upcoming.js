@@ -1,7 +1,7 @@
 import React from 'react';
 import './Upcoming.css';
 import Movies from '../../Copmponents/Movies/Movies';
-import { api_key, base } from '../../Copmponents/allRequests';
+import { api_key, base } from '../../staticInfo';
 
 function Upcoming() {
     return (

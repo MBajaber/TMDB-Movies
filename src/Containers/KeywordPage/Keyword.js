@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Keyword.css';
 import { useSelector } from 'react-redux';
 import Movies from '../../Copmponents/Movies/Movies';
-import { api_key, base } from '../../Copmponents/allRequests';
+import { api_key, base } from '../../staticInfo';
 
 function Keyword() {
 
@@ -10,7 +10,6 @@ function Keyword() {
     useEffect(() => {
         document.body.scrollIntoView({behavior: 'smooth'});
     }, []);
-
 
     return (
         <div className="keyword">

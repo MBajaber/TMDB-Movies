@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Containers/TopRated/TopRated.css"],"names":[],"mappings":"AAAA,kBACE,UAAW,CACX,iBACF,CAEA,mCACE,kCAA2B,CAA3B,0BACF","file":"17.d9e67571.chunk.css","sourcesContent":[".top_rated_movies {\r\n  color: #fff;\r\n  padding: 40px 20px;\r\n}\r\n\r\n.top_rated_movies .title_top_rated {\r\n  text-decoration: capitalize;\r\n}\r\n"]}

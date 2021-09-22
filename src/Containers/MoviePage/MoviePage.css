@@ -68,7 +68,6 @@
   }
 
   .movie_page .banner_movie .content_movie .info_movie > * {
-    /* margin: auto; */
     text-align: center;
   }
 }
@@ -82,7 +81,6 @@
 .movie_page .banner_movie .content_movie .info_movie .movie_details {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
 }
 
 @media (max-width: 680px) {

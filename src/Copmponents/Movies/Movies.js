@@ -3,7 +3,7 @@ import './Movies.css';
 import Movie from './Movie/Movie';
 import { useDispatch } from 'react-redux';
 import { getMovieId } from '../../store/movieSlice';
-import { allRequest } from '../../Copmponents/allRequests';
+import { imageUrl } from '../../staticInfo';
 import Loader from '../Loader/Loader';
 import Pagination from '../Pagination/Pagination';
 
@@ -49,7 +49,7 @@ function Movies({ startUrl, endUrl }) {
                     <>
                         <div className="all_movies">
                             {
-                                getAllMovies.results.map(({ backdrop_path, id, title, overview, release_date, vote_average }) => <Movie key={id} imageUrl={`${allRequest.imageUrl}/w300/${backdrop_path}`} id={id} title={title} paragraph={overview} rating={vote_average} date={release_date} clickHandler={clickHandler} />)
+                                getAllMovies.results.map(({ backdrop_path, id, title, overview, release_date, vote_average }) => <Movie key={id} imageUrl={`${imageUrl}/w300/${backdrop_path}`} id={id} title={title} paragraph={overview} rating={vote_average} date={release_date} clickHandler={clickHandler} />)
                             }
                         </div>
                         <Pagination page={pageNumber} totalPages={getAllMovies.total_pages} changePageNumber={changePageNumber} />

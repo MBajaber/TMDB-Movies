@@ -1,13 +1,13 @@
 import React, { useEffect, lazy, Suspense } from 'react';
-import './App.css';
 import Bar from '../Copmponents/Bar/Bar';
 import { Route, Switch } from 'react-router-dom';
 import Loader from '../Copmponents/Loader/Loader';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth } from '../firebase';
 import { getUserInfo } from '../store/UserSlice';
 import { bringDataFromLocalstorage } from '../store/movieSlice';
 import { bringDataFromLocalStorageFunc } from '../LocalStorageFunctons';
+import { withRouter, Redirect } from 'react-router-dom';
 
 const Main = lazy(() => import('../Containers/Main/Main'));
 const MoviePage = lazy(() => import('../Containers/MoviePage/MoviePage'));
@@ -23,8 +23,8 @@ const SignUpPage = lazy(() => import('../Containers/SignUp/SignUp'));
 const NowPlayingPage = lazy(() => import('../Containers/NowPlaying/NowPlaying'));
 const PageNotFound = lazy(() => import('../Containers/NotFound/NotFound'));
 
-function App() {
-
+function App({history}) {
+  const { movieId, peopleId, genres, keyword } = useSelector(state => state.movies);
   const dispatch = useDispatch();
   
   useEffect(() => {
@@ -45,14 +45,22 @@ function App() {
 
   return (
     <div className="App">
-      <Bar />
+      <Bar history={history} />
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route exact path='/' component={Main} />
-          <Route path='/movie/:movieName' component={MoviePage} />
-          <Route path='/people/:peopleName' component={PeoplePage} />
-          <Route path='/keyword/:keyword' component={KeywordPage} />
-          <Route path='/genre/:genre' component={GenrePage} />
+          <Route path='/movie/:movieName' >
+            { movieId.length !== 0 ? <MoviePage /> : <Redirect to='/' /> }
+          </Route>
+          <Route path='/people/:peopleName' >
+            { peopleId.length !== 0 ? <PeoplePage /> : <Redirect to='/' /> }
+          </Route>
+          <Route path='/keyword/:keyword'>
+            { Object.keys(keyword).length !== 0 ? <KeywordPage /> : <Redirect to='/' /> }
+          </Route>
+          <Route path='/genre/:genre'>
+            { Object.keys(genres).length !== 0 ? <GenrePage /> : <Redirect to='/' /> }
+          </Route>
           <Route path='/popular' component={PopularPage} />
           <Route path='/top_rated' component={TopRatedPage} />
           <Route path='/upcoming' component={UpcomingPage} />
@@ -67,4 +75,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

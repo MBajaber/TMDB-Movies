@@ -1,11 +1,7 @@
-import { createSlice, current } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { saveDataToLocalStorage } from '../LocalStorageFunctons';
 
 const initialState = {
-    allData: {},
-    movies: [],
-    mainMovie: null,
-    mainPageNumber: 1,
     movieId: '',
     peopleId: '',
     keyword: {},
@@ -17,15 +13,9 @@ const movies = createSlice({
     name: 'movies',
     initialState,
     reducers: {
-        getAllMovies: (state, action) => ({...state, allData: action.payload.data, movies: action.payload.data.results}),
-        // pageHandler: (state, action) => ({...state, mainPageNumber: action.payload.pageNumber}),
         changeMainPage: (state, action) => {
             console.log(action.payload)
             return {...state}
-        },
-        getMainMovie: (state) => {
-            let randomNumber = Math.ceil(Math.random() * current(state.allData.results).length);
-            return {...state, mainMovie: current(state.allData.results)[randomNumber - 1]}
         },
         getMovieId: (state, action) => ({...state, movieId: action.payload}),
         peopleIdFunc: (state, action) => ({...state, peopleId: action.payload}),
@@ -53,6 +43,5 @@ const movies = createSlice({
     }
 });
 
-export const { getAllMovies, getData, pageHandler, getMainMovie, getMovieId, peopleIdFunc, keyWordFunc, genreFunc, addToFavoriteList, removeFromFavoriteList, bringDataFromLocalstorage } = movies.actions;
-
+export const { getMovieId, peopleIdFunc, keyWordFunc, genreFunc, addToFavoriteList, removeFromFavoriteList, bringDataFromLocalstorage } = movies.actions;
 export default movies.reducer;

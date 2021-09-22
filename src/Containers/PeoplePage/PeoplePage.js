@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './PeoplePage.css';
 import { useSelector } from 'react-redux';
-import { api_key, base, allRequest } from '../../Copmponents/allRequests';
+import { api_key, base, imageUrl } from '../../staticInfo';
 import Loader from '../../Copmponents/Loader/Loader';
 import Movies from '../../Copmponents/Movies/Movies';
 
@@ -38,7 +38,7 @@ function PeoplePage() {
         <div className='people_page'>
             <div className="people_image_info">
                 <div className="people_image">
-                    <img src={`${allRequest.imageUrl}/w300${peopleInfo.profile_path}`} alt="" loading='lazy' />
+                    <img src={`${imageUrl}/w300${peopleInfo.profile_path}`} alt="" loading='lazy' />
                 </div>
                 <div className="people_info">
                     <h3 className="people_title">Personal Info</h3>
